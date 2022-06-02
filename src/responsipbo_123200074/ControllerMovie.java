@@ -20,7 +20,7 @@ public class ControllerMovie {
      ModelMovie modelMovie;
      ViewMovie viewMovie;
      
-     public String dataterpilih;
+     private String dataterpilih;
      
     public ControllerMovie(ModelMovie modelMovie, ViewMovie viewMovie) {
         this.modelMovie = modelMovie;
@@ -44,7 +44,7 @@ public class ControllerMovie {
                 String penokohan = viewMovie.getPenokohan();
                 String akting = viewMovie.getAkting();
                 modelMovie.insertmovie(judul, alur, penokohan, akting);
-         
+                
             String dataMovie[][] = modelMovie.MovieList();
             viewMovie.tabel.setModel((new JTable(dataMovie, viewMovie.namaKolom)).getModel());
             }
@@ -53,7 +53,7 @@ public class ControllerMovie {
           viewMovie.btnUpdate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                 String judul = viewMovie.getJudul();
+                String judul = viewMovie.getJudul();
                 String alur = viewMovie.getAlur();
                 String penokohan = viewMovie.getPenokohan();
                 String akting = viewMovie.getAkting();

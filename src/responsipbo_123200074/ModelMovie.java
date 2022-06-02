@@ -63,9 +63,9 @@ public class ModelMovie {
 
     public void insertmovie(String judul, String alur, String penokohan, String akting){
      int jmlData=0;
-     double falur=Float.parseFloat(alur);
-     double fpenokohan=Float.parseFloat(penokohan);
-     double fakting=Float.parseFloat(akting);
+     double falur=Double.parseDouble(alur);
+     double fpenokohan=Double.parseDouble(penokohan);
+     double fakting=Double.parseDouble(akting);
      double nilai = (falur + fpenokohan +fakting)/3;
         try {
            String query = "Select * from movie WHERE judul = '" + judul + "' "; 
@@ -97,9 +97,9 @@ public class ModelMovie {
     
     public void updateMovie(String judul, String alur, String penokohan, String akting){
         int jmlData=0;
-        double falur=Float.parseFloat(alur);
-     double fpenokohan=Float.parseFloat(penokohan);
-     double fakting=Float.parseFloat(akting);
+        double falur=Double.parseDouble(alur);
+     double fpenokohan=Double.parseDouble(penokohan);
+     double fakting=Double.parseDouble(akting);
         double nilai = (falur + fpenokohan +fakting)/3; 
         try {
            String query = "Select * from movie WHERE judul= '" + judul + "' "; 
